@@ -1,0 +1,14 @@
+from telegram.ext import Updater, CommandHandler
+
+def start(update, context):
+    update.message.reply_text("✅ Бот працює!")
+
+def main():
+    updater = Updater("8022312142:AAGUxM_ZOpgzquWjJVGkSeZDibOFyjHZZOI", use_context=True)
+    dp = updater.dispatcher
+    dp.add_handler(CommandHandler("start", start))
+    updater.start_polling()
+    updater.idle()
+
+if name == '__main__':
+    main()
